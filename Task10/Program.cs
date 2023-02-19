@@ -11,3 +11,5 @@ System.Console.WriteLine(randNumber);
 int desiredNumber = (randNumber/10)%10;  // 456/10->45, 45%10->5 или 456%100->56, 56/10->5 
 
 System.Console.WriteLine(desiredNumber);
+
+//Должна быть проверка, что число трехзначное..число не трехзначное
