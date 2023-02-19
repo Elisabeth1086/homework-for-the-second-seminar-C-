@@ -4,14 +4,33 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Random rand = new Random();
-int randNumber = rand.Next();  //Получить очередное случайное число
+System.Console.Write("Введите число: ");
+int randNumber=Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine(randNumber);
-
-if(randNumber>99)
+if(randNumber>99 && randNumber<1000)  // трехзначное
 {
-       System.Console.WriteLine(randNumber.ToString()[2] + " "); //ToString служит для получения строкового представления данного объекта. Для базовых типов просто будет выводиться их строковое значение
+    int x=randNumber%10;
+    System.Console.WriteLine(x);
+}
+else if(randNumber>999 && randNumber<10000)  //четырехзначное
+{
+    int x=(randNumber/10)%10;
+    System.Console.WriteLine(x);
+}
+else if(randNumber>9999 && randNumber<100000)  //пятизначное
+{
+    int x=(randNumber/100)%10;
+    System.Console.WriteLine(x);
+}
+else if(randNumber>99999 && randNumber<1000000)  //шестизначное
+{
+    int x=(randNumber/1000)%10;
+    System.Console.WriteLine(x);
+}
+else if(randNumber>999999 && randNumber<10000000)  //семизначное
+{
+    int x=(randNumber/10000)%10;
+    System.Console.WriteLine(x);
 }
 else
 {
