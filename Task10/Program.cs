@@ -3,13 +3,16 @@
 // 782 -> 8 
 // 918 -> 1
 
-Random rand = new Random();
-int randNumber = rand.Next(100,1000);
+System.Console.Write("Введите число: ");
+int randNumber=Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine(randNumber);
+if(randNumber>99 && randNumber<1000)
+{
+    int desiredNumber = (randNumber/10)%10;         // 456/10->45, 45%10->5 или 456%100->56, 56/10->5 
+    System.Console.WriteLine(desiredNumber);
+}
+else
+{
+    System.Console.WriteLine("Данное число не трехзначное");
 
-int desiredNumber = (randNumber/10)%10;  // 456/10->45, 45%10->5 или 456%100->56, 56/10->5 
-
-System.Console.WriteLine(desiredNumber);
-
-//Должна быть проверка, что число трехзначное..число не трехзначное
+}
